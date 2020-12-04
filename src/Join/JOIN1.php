@@ -25,6 +25,7 @@ setlocale(LC_MONETARY, 'pt-br');
 $sql = "SELECT * FROM tabela_cliente JOIN tabela_vendas ON tabela_cliente.Id_cliente = tabela_vendas.Id_cliente JOIN tabela_produtos ON tabela_vendas.Id_produto = tabela_produtos.Id_produto";
  
 $result =$conn->query($sql);
-
+echo"<pre>";
    print_r(json_encode ( $result ->fetch_all(MYSQLI_ASSOC)) ); //fetch significa buscar todos da minha tabela de itens registrados no banco de dados!!
+echo"<pre>";
 ?>
